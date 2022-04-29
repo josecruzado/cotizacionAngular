@@ -1,0 +1,13 @@
+<div class="container-fluid p-5">
+  <div class="row justify-content-md-between justify-content-center" style="margin-top: 50px;">
+    <app-title-h1 class="text-center col-12 col-md-auto" type="secondary" text="Lista Otros"></app-title-h1>
+    <div class="row col-12 col-md-9 justify-content-center justify-content-md-end">
+      <input class="mr-1 mr-md-2 col-10 col-md-4 form-control" type="text" placeholder="Nombre material">
+      <button class="col-auto col-md-1 mb-3 btn btn-dark" data-toggle="modal" data-target="#exampleModal"
+        type="button"><span class="material-icons">add</span></button>
+      <app-other-form class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" id="exampleModal"></app-other-form>
+    </div>
+  </div>
+  <app-table [GridData]="gridData" [ColData]="colData"></app-table>
+</div>

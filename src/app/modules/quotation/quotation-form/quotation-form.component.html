@@ -1,0 +1,121 @@
+<div class="container-fluid p-5">
+  <form>
+    <app-title-h1 class="text-center col-12 col-md-auto " type="S" text="Crear Cotización"></app-title-h1>
+    <div class="form-row mt-0">
+      <div class="form-group col-md-9 text-center">
+        <input type="email" class="form-control text-center" id="inputEmail4" placeholder="Ingrese Nombre del Cliente">
+      </div>
+      <div class="form-group col-md-2 text-center">
+        <button type="button" class="btn btn-primary btn-block ml-md-auto">Buscar</button>
+      </div>
+      <div class="form-group col-md-1 text-center">
+        <button type="button" class="btn btn-primary btn-block ml-md-auto">Crear</button>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col text-center">
+        <input disabled type="text" class="form-control text-center" id="inputAddress" placeholder="Razón Social">
+      </div>
+      <div class="form-group col text-center">
+        <input disabled type="text" class="form-control text-center" id="inputAddress" placeholder="Ruc">
+      </div>
+    </div>
+    <hr>
+    <div class="form-row">
+      <div class="form-group col text-center">
+        <label for="inputCity">Fecha</label>
+        <input type="date" class="form-control text-center" id="inputCity">
+      </div>
+    </div>
+    <hr>
+    <div class="form-row">
+      <div class="form-group col-3 text-center">
+        <button type="button" class="btn btn-primary btn-block ml-md-auto text-center" data-toggle="modal"
+          data-target="#productosModal">Ver Productos</button>
+      </div>
+      <div class="form-group col-3 text-center">
+        <button type="button" class="btn btn-primary btn-block ml-md-auto text-center">Ver Servicios</button>
+      </div>
+      <div class="form-group col-3 text-center">
+        <button type="button" class="btn btn-primary btn-block ml-md-auto text-center">Ver Materiales</button>
+      </div>
+      <div class="form-group col-3 text-center">
+        <button type="button" class="btn btn-primary btn-block ml-md-auto text-center">Ver Otros</button>
+      </div>
+    </div>
+    <div class="form-row" style="justify-content:center">
+      <button type="submit" class="btn btn-primary btn-lg text-center mb-3"><span class="material-icons">
+        save
+        </span>Crear Cotización</button>
+    </div>
+  </form>
+</div>
+
+<!-- Modal Productos -->
+
+<div class="modal fade" id="productosModal" tabindex="-1" role="dialog" aria-labelledby="productosModal"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Productos de Cotización</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row mt-0">
+            <div class="form-group col-md-8">
+              <input type="text" class="form-control " id="inputEmail4" placeholder="Ingrese nombre producto">
+            </div>
+            <div class="form-group col-md-4 text-center">
+              <button type="button" class="btn btn-primary btn-block ml-md-auto">Buscar</button>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <input disabled type="text" class="form-control" id="inputAddress" placeholder="Nombre producto">
+            </div>
+            <div class="form-group col-3">
+              <input disabled type="text" class="form-control" id="inputAddress" placeholder="P.C.">
+            </div>
+            <div class="form-group col-3">
+              <input disabled type="text" class="form-control" id="inputAddress" placeholder="P.V.">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-4">
+              <input type="number" class="form-control" id="inputAddress" placeholder="Cantidad">
+            </div>
+            <div class="form-group col-4">
+              <input type="number" class="form-control" id="inputAddress" placeholder="Utilidad">
+            </div>
+            <div class="form-group col-4">
+              <input type="number" class="form-control" id="inputAddress" placeholder="Margen de Utilidad">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <button type="button" class="btn btn-primary btn-block ml-md-auto">Agregar</button>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <app-table-scroll [GridData]="gridData" [ColData]="colData" class="panel-body table-responsive"></app-table-scroll>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('#productosModal').modal('handleUpdate')
+</script>
+
+<!-- Modal Servicios -->
+

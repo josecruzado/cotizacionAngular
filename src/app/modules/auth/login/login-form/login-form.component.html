@@ -1,0 +1,18 @@
+<body class="text-center">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)"class="form-signin">
+    <img class="mb-4" src="http://innovat.com.pe/portal/wp-content/uploads/2017/09/innova-t-logo-curvas475x168.png" alt="" width="200"
+      height="80">
+    <h1 class="h3 mb-3 font-weight-normal"> Iniciar Sesión</h1>
+    <label for="inputEmail" class="sr-only">Usuario</label>
+    <input name="username" ngModel required #username="ngModel" type="text" id="inputEmail"  class="form-control" placeholder="Usuario" autofocus>
+    <label for="inputPassword" class="sr-only">Contraseña</label>
+    <input name="password" ngModel required #password="ngModel" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" >
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Recuérdame
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="f.invalid">Iniciar Sesión</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+  </form>
+</body>

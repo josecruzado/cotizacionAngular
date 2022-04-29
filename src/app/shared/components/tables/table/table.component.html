@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table id="clientes" class="table table-hover">
+      <thead>
+        <tr >
+          <th scope="col">#</th>
+          <th *ngFor="let key of ColData">{{key.header}}</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of GridData, let indice=index">
+          <td>{{indice+1}}</td>
+          <td *ngFor="let key of ColData">
+              <span>{{record[key.field]}}</span>
+          </td>
+          <td><span class="material-icons">create</span></td>
+          <td><a (click)="funcioncita(record['id'])" ><span class="material-icons">delete</span></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table id="clientes" class="table table-hover">
+      <thead>
+        <tr >
+          <th scope="col">#</th>
+          <th *ngFor="let key of ColData">{{key.header}}</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+          <th scope="col">Ver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cotizacion of Cotizaciones, let indice=index">
+          <td>{{indice+1}}</td>
+          <td>{{cotizacion.cliente.razonSocial}}</td>
+          <td>{{cotizacion.subTotal}}</td>
+          <td>{{cotizacion.totalIgv}}</td>
+          <!-- <td><span>{{cotizacion.fecha | date:"MM/dd/yyyy 'at' h:mma"}}</span></td> -->
+          <td><span>{{cotizacion.fecha | date:"dd/MM/yyyy"}}</span></td>
+          <td><span class="material-icons">create</span></td>
+          <td><span class="material-icons">delete</span></td>
+          <td><span class="material-icons">visibility</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

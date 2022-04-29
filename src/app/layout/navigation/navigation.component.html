@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="http://innovat.com.pe/portal/wp-content/uploads/2017/09/innova-t-logo-curvas475x168.png" width="100px"
+      height="50px">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Cotización
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/cotizaciones/form">Crear</a>
+          <a class="dropdown-item" routerLink="/cotizaciones" >Listar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Gestión
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/clientes" routerLinkActive="active">Clientes</a>
+          <a class="dropdown-item" routerLink="/productos">Productos</a>
+          <a class="dropdown-item" routerLink="/materiales">Materiales</a>
+          <a class="dropdown-item" routerLink="/manodeobra">Mano de Obra</a>
+          <a class="dropdown-item" routerLink="/otros">Otros</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+        <li class="nav-item order-2 order-md-1"><a href="#" ></a></li>
+        <li class="order-1">
+            <button (click)="logout()" type="button" class="btn btn-outline-primary">Salir <span class="inline-icon material-icons">
+                logout
+                </span></button>
+        </li>
+    </ul>
+  </div>
+</nav>
